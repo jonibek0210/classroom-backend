@@ -39,6 +39,7 @@ router.get('/', async (req, res) => {
             .where(whereClause)
 
         const totalCount = countResults[0]?.count ?? 0
+
         const subjectsList = await db
             .select({
                 ...getTableColumns(subjects),
